@@ -1,0 +1,495 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    box-sizing: border-box;
+}
+
+/* Importar fuentes tipograficas */
+@font-face {
+    font-family: Arvo;
+    src: url(../fonts/Arvo-Regular.ttf);
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/static/Montserrat-Regular.ttf);
+}
+
+html{
+    width: 100%;
+}
+
+/* Movile first / estilo de la vista móvil */
+.grid-container{
+    display: grid;
+    gap:10px;
+    grid-template: 
+        "header"    auto
+        "navbar"    auto
+        "main"      auto
+        "footer"    auto;
+}
+
+.header{
+    grid-area: header;
+}
+
+.navbar{
+    grid-area: navbar;
+}
+
+.main{
+    grid-area: main;
+}
+
+/* //Movile first / estilo de la vista móvil */
+
+/* ----------------------------------------------*/
+
+/* Estilo del header */
+
+body{
+    font-family: Montserrat;
+    font-size: 1.2rem;
+    min-height: 100%;
+    background-image: linear-gradient(to left top, #ff6392, #f34f99, #e43ca3, #cf2daf, #b327bb, #a03cca, #884cd7, #6b59e2, #5d72ef, #5688f7, #589cfc, #65afff);}
+h1{
+    font-family: Arvo;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding: 10px;
+    top: 10px;    
+   }
+h2{
+    font-family: Arvo;
+    font-size: 18px;
+    padding: 10px;
+    top: 10px;    
+   }
+p{
+    font-size: 14px;
+    padding: 12px;
+    text-align: center;
+    }   
+
+.logo{
+    font-family: Arvo;
+    font-size: 3rem;
+    max-width: 120px;
+}
+
+/* Estilo de la barra de navegación */
+
+.topnav {
+    overflow: hidden;
+    background-color: #f4fffd;
+    display: flex;
+    text-align: center;
+  }
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: #18020c;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: #18020c;
+  }
+  
+  .topnav a.active {
+    background-color: #884cd7;
+    color: #f4fffd;
+  }
+  
+  .topnav .icon {
+    display: none;
+  }
+  
+/* ----------------------------------------------*/
+/* Estilo del carrusel de fotos*/
+.carrousel{
+    width: 90%;
+    max-width: 120em;
+    
+    padding: 1em;
+    margin: auto;
+    
+
+    border-radius: 4px;
+    background: linear-gradient(145deg, #cacaca, #f4fffd);
+    box-shadow:  10px 10px 30px #cacaca,
+                -10px -10px 30px #ffffff;
+                
+}
+
+.carrousel .grande{
+    width: 200%;
+    border-radius: 4px;
+    background: linear-gradient(145deg, #cacaca, #f4fffd);
+    box-shadow:  10px 10px 30px #cacaca,
+                -10px -10px 30px #ffffff;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+
+    transition: all .5s ease;
+    transform: translateX(0%);
+}
+
+.carrousel .img{
+    width: calc(100% / 2 - 2em);
+    min-height: 10vh;
+
+    border-radius: 4px;
+    background: linear-gradient(145deg, #cacaca, #f4fffd);
+    box-shadow:  10px 10px 30px #cacaca,
+                -10px -10px 30px #ffffff;
+}
+
+.carrousel .puntos{
+    width: 100%;
+    padding: .4em;
+    margin: 1em 0 0;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(145deg, #cacaca, #f4fffd);
+    box-shadow:  10px 10px 30px #cacaca,
+                -10px -10px 30px #ffffff;
+}
+
+.carrousel .punto{
+    width: 1em;
+    height: 1em;
+    margin: 1em 1em .6em;
+
+    border-radius: 50px;
+    background: linear-gradient(145deg, #cacaca, #f4fffd);
+    box-shadow:  10px 10px 30px #cacaca,
+                -10px -10px 30px #ffffff;
+}
+
+.carrousel .punto.activo{
+    background: linear-gradient(145deg, #65afff, #f4fffd);
+}
+
+.main ul{
+    list-style: none;
+}
+
+.main{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    box-sizing: border-box;
+}
+
+/* ----------------------------------------------*/
+ 
+/* Estilo de la galería de fotos*/
+.grid-container > *{
+    padding: 10px;
+    text-align: center;
+
+    border-radius: 4px;
+    box-shadow: -1px 1px 7px 0px #18020c;
+    background-color: #f4fffd;
+}
+
+.grid-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2px;
+    min-height: 200px;
+
+    transition: 0.3s;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    border-radius: 4px;
+    box-shadow: -1px 1px 7px 0px #18020c;
+    background-color: #884cd7;
+
+}
+
+.grid-item:hover{
+    filter: opacity(0.9);
+    transform: scale(1.04);
+}
+
+.grid-item a{
+    text-decoration: none;
+    color:#f4fffd;
+    font-size: 18px;
+
+    border: 1.5px solid #f4fffd;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-auto-rows: minmax(200px, auto);
+    gap: 20px;
+    padding: 20px;
+    grid-auto-flow: dense;
+}
+
+/* ----------------------------------------------*/
+/* Estilo de about us*/
+
+.sidebar__sidebar .image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    padding: 10px;
+}
+.sidebar h1{
+    font-size: 25px;
+}
+
+.button {
+    border: none;
+    color: white;
+    padding: 25px;
+    margin: 10px 15px;
+    text-decoration: none;
+    display:inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: #884cd7;
+  }
+
+  .sidebar__main a{
+    text-decoration: none;
+    color: #f4fffd;
+}
+
+/* Estilo del Contact*/
+
+input[type=text], select, textarea {
+    width: 100%; 
+    padding: 12px;
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical; 
+
+    background: linear-gradient(145deg, #cacaca, #f4fffd);
+    box-shadow:  10px 10px 30px #cacaca,
+                -10px -10px 30px #ffffff;
+    
+  }
+  
+  .container {
+    border-radius: 4px;
+    padding: 60px;
+    background: linear-gradient(145deg, #cacaca, #f4fffd);
+    box-shadow:  10px 10px 30px #cacaca,
+                -10px -10px 30px #ffffff;
+  }
+
+/* Estilo de la*/
+  .spin-button {
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+    display: flex;
+    overflow: hidden;
+}
+
+.spin-button__input {
+    border-color: transparent;
+    padding: 0.5rem;
+
+    /* Demo */
+    width: 8rem;
+}
+
+.spin-button__buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    border-left: 1px solid #d1d5db;
+}
+
+.spin-button__button {
+    background: #fff;
+    border-color: transparent;
+    cursor: pointer;
+
+    flex: 1;
+}
+/* ----------------------------------------------*/
+/* Estilo del footer */
+.footer{
+    grid-area: footer;
+
+    padding: 40px 0;
+    background-color: #18020c;
+}  
+
+.footer .social{
+    text-align: center;
+    padding-bottom: 25px;
+    color: #cacaca;
+}
+
+.footer .social a {
+    color: #cacaca;
+    font-size: 18px;
+    border: 1px solid #cacaca;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    opacity: 0.75;
+}
+
+.footer .social a:hover{
+    opacity: 0.9;
+}
+
+.footer ul{
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.footer ul a{
+    color: #cacaca;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.footer ul li{
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.footer ul li a:hover{
+    opacity: 1;
+}
+
+.footer .copyright{
+    padding: 10px;
+    margin-top: 15px;
+    text-align: center;
+    font-size: 12px;
+    color: #cacaca;
+}
+/* Estilo del footer */
+
+/* ----------------------------------------------*/
+
+ /* Modo ordenador */
+@media (min-width: 600px)
+{
+    .grid-container{
+        grid-template:
+        "header  header header" auto
+        "navbar  navbar navbar" auto
+        "main    main   main" auto
+        "footer  footer footer" auto /
+        auto    auto   auto;
+    }   
+
+    p{
+        font-size: 16.5px;
+        
+    }   
+
+    .sidebar {
+        display: flex;
+        height: auto;
+    }
+    
+    .sidebar__sidebar {
+        width: 30%;
+    }
+
+    .sidebar__sidebar .image{
+        height: auto;
+        width: 400px;
+        display: flex;
+    }
+    
+    .sidebar__main {
+        flex: 1;
+        overflow: auto;
+        padding: 10px;
+        text-align: right;
+     }
+
+    .sidebar__main p{
+        text-align: right;
+        font-size: 16px;
+        margin-left: 120px;
+        padding: 15px;
+    }
+
+    .wide{
+        grid-column: span 2;
+    }
+
+    .tall{
+        grid-row: span 2;
+    }
+
+    .carrousel .punto{
+        width: 1.5em;
+        height: 1.5em; }
+
+        .sidebar {
+            display: flex;
+        }
+        
+        .sidebar__sidebar {
+            width: 30%;
+        }
+        
+        .sidebar__main {
+            /* Take the remaining width */
+            flex: 1;
+        
+            /* Make it scrollable */
+            overflow: auto;
+        }
+
+        .footer ul{
+        font-size: 16px;
+        }
+        .footer .copyright{
+        font-size: 14px;
+        }  
+}
